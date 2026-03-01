@@ -29,7 +29,7 @@ variable "alb_sg_id" {
   description = "for alb sg"
 }
 
-variable "alb_sg_subnets" {
+variable "alb_subnets" {
   type        = list(string)
   description = "for alb subnets"
 }
