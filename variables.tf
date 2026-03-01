@@ -32,3 +32,7 @@ variable "alb_subnets" {
   type        = list(string)
   description = "for alb subnets"
 }
+
+variable "iam_profile" {
+  type = string
+}

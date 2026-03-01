@@ -1,10 +1,10 @@
 resource "aws_instance" "ec2_instance" {
-  for_each      = var.instance_config
-  ami           = each.value.ami
-  instance_type = each.value.instance_type
-  subnet_id     = each.value.subnet_id
-  key_name      = var.keypair
-
+  for_each             = var.instance_config
+  ami                  = each.value.ami
+  instance_type        = each.value.instance_type
+  subnet_id            = each.value.subnet_id
+  key_name             = var.keypair
+  iam_instance_profile = var.iam_profile
   tags = {
     Name = "${each.key}-instance"
   }
