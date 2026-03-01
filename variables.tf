@@ -5,10 +5,9 @@ variable "name" {
 
 variable "instance_config" {
   type = map(object({
-    ami                 = string
-    instance_type       = string
-    subnet_id           = string
-    associate_public_ip = bool
+    ami           = string
+    instance_type = string
+    subnet_id     = string
 
   }))
   description = " for instance configuration"
