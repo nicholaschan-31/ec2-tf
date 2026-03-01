@@ -13,7 +13,7 @@ resource "aws_instance" "ec2_instance" {
 resource "aws_lb" "alb" {
   internal           = false
   load_balancer_type = "application"
-  security_groups     = var.alb_sg_id
+  security_groups    = var.alb_sg_id
   subnets            = var.alb_subnets
 
   tags = {
