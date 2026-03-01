@@ -36,3 +36,7 @@ variable "alb_subnets" {
 variable "iam_profile" {
   type = string
 }
+
+variable "ec2_sg_id" {
+  type = list(string)
+}
